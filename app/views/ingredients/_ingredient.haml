@@ -1,0 +1,3 @@
+%li
+  = link_to ingredient.name, ingredient
+  &nbsp;(#{link_to 'Delete', ingredient, method: :delete, data: {confirm: "Are you sure?"}})

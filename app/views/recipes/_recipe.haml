@@ -1,0 +1,5 @@
+%h3
+  = link_to recipe.name, recipe
+  (#{link_to 'Edit', edit_recipe_path(recipe)} | #{link_to 'Delete', recipe, method: :delete, data: {confirm: "Are you sure?"}})
+%ul
+  = render recipe.ingredients

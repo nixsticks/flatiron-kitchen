@@ -1,0 +1,10 @@
+%h1= @ingredient.name
+%p
+  = link_to 'Edit', edit_ingredient_path
+  |
+  = link_to 'Delete', ingredient_path, method: :delete, data: {confirm: "Are you sure?"}
+%h3 Used in:
+%ul
+  = render @ingredient.recipes
+
+%p= link_to 'Back to pantry', ingredients_path
